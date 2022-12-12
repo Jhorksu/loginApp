@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login App</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Cubano Font-->
+    <link href="https://fonts.cdnfonts.com/css/cubano" rel="stylesheet">
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Main -->
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Login App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-out" data-bs-toggle="modal" data-bs-target="#registerModal" href="#">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link logged-in" id="logout" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: white;">Login</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="login-form">
+                <label for="email">Email </label>
+                <input id="login-email" type="email" class="form-control mb-3" placeholder="User123@gmail.com" required>
+                
+                <label for="password">Password </label>
+                <input id="login-password"  type="password" class="form-control mb-3" placeholder="*****" required>
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
+              </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark" >
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: white;">Register</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="register-form">
+            <label for="email">Email </label>
+            <input id="register-email" type="email"  class="form-control mb-3" placeholder="User123@gmail.com" required>
+            
+            <label for="password"> Password </label>
+            <input id="register-password" type="password" class="form-control mb-3" placeholder="*****" required>
+            <button type="submit" class="btn btn-primary">
+                Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!--Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
